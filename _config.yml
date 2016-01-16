@@ -1,0 +1,56 @@
+title: Книги
+email: zumra6a@yandex.ru
+description: >
+  This is systematized archive of my thoughts.
+  Don't be scared if you find posts in Russian or in Turkish.
+  Please feel free to correct my mistakes.
+
+url: "http://shuhrat.github.io"
+baseurl: "/books"
+timezone: Europe/Moscow
+
+# Conversion
+markdown: redcarpet
+highlighter: pygments
+markdown_ext: markdown,md
+redcarpet:
+  extensions:
+  - tables
+  - autolink
+  - strikethrough
+  - space_after_headers
+  - with_toc_data
+  - fenced_code_blocks
+
+encoding: UTF-8
+
+# Outputting
+permalink: ":title.html"
+
+# Contacts
+contacts:
+  twitter: zumra6a
+  instagram: zumra6a
+  github:  shuhrat
+
+metrika:
+  id: 28307931
+  webvisor: true
+  clickmap: true
+  trackLinks: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      categories: "books"
+
+gems:
+  - jemoji
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jekyll-redirect-from

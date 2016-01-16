@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="title">{{ site.title }}</h1>
+  <h2 class="subtitle">{{ site.description }}</h2>
+  <table class="post-list">
+    <thead>
+      <tr>
+        <th>Дата</th>
+        <th>Название</th>
+        <th>Авторы</th>
+      </tr>
+    </thead>
+    {% for post in site.posts %}
+      <tr class="click-row" data-href="{{ post.url | prepend: site.baseurl }}">
+        <td>{% include date.html date=post.date %}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.authors }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<script>
+  var elements = document.getElementsByClassName("click-row")
+  Array.prototype.forEach.call(elements, function(el) {
+    el.addEventListener('click', function() {
+      window.location.href = this.dataset.href
+    })
+  })
+</script>
